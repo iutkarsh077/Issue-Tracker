@@ -5,7 +5,7 @@ import SimpleMDE from "react-simplemde-editor";
 import { useForm, Controller } from "react-hook-form";
 import axios from "axios";
 import "easymde/dist/easymde.min.css";
-// import { useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 import Spinner from "../../components/Spinner";
 
@@ -15,9 +15,9 @@ interface IssueForm {
 }
 
 const NewIssuePage = () => {
-  const [Error, setError] = useState("");
+  const [Error, setError] = useState<string>("");
   const [isSubmit, setIsSubmit] = useState(false);
-  // const router = useRouter();
+  const router = useRouter();
   const { register, control, handleSubmit } = useForm<IssueForm>();
   return (
     <div className="max-w-xl">
@@ -34,9 +34,8 @@ const NewIssuePage = () => {
               .post("/api/issue", data)
               .then((res) => {
                 setIsSubmit(true);
-                console.log(res);
-
-                // router.push("/issues");
+                // console.log(res);
+                router.push("/issues");
               })
               .catch((err) => {
                 setIsSubmit(false);

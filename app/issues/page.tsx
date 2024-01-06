@@ -1,3 +1,4 @@
+"use client";
 import React from 'react'
 import Link from 'next/link'
 import { Button } from '@radix-ui/themes'
@@ -11,4 +12,4 @@ const IssuesPage = () => {
   )
 }
 
-export default IssuesPage
+export default IssuesPage;
