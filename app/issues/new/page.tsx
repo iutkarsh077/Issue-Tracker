@@ -1,4 +1,4 @@
-// "use client";
+"use client";
 import { Callout, TextField } from "@radix-ui/themes";
 import { Button } from "@radix-ui/themes";
 import SimpleMDE from "react-simplemde-editor";
@@ -31,7 +31,9 @@ const NewIssuePage = () => {
         await axios.post('/api/issue', data).then((res)=>{
           setIsSubmit(true);
             console.log(res);
-            router.push('/issues');
+            if (typeof window !== 'undefined' && typeof navigator !== 'undefined') {
+              router.push('/issues');
+          }
         }).catch((err)=>{
           setIsSubmit(false);
             console.log(err);
