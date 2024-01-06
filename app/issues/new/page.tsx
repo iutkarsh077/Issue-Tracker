@@ -67,7 +67,7 @@ const NewIssuePage = () => {
         />
       </label>
   
-      <Button disabled={isSubmit} type="submit">
+      <Button disabled={isSubmit} className="bg-blue-500 hover:cursor-pointer" type="submit">
         Submit New issue {isSubmit && <Spinner />}
       </Button>
     </form>
