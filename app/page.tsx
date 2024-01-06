@@ -27,7 +27,7 @@ export default function Home() {
     <div className="container mx-auto p-4">
       {Issue1.map((myissue) => (
         <div key={myissue._id} className="mb-4 p-4 border hover:bg-slate-200 ease-out hover:cursor-pointer rounded-lg shadow-md">
-          <div className="text-lg font-semibold mb-2">{myissue.title}</div>
+          <div className="text-lg font-semibold mb-2 text-red-600">{myissue.title}</div>
           <div className="text-gray-600">{myissue.description}</div>
         </div>
       ))}
