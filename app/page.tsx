@@ -4,8 +4,8 @@ import { useEffect, useState } from "react";
 
 interface Issue {
   _id: string,
-  title: string;
-  description: string;
+  title: string,
+  description: string
 }
 export default function Home() {
   const [Issue1, setIssue1] = useState<Array<Issue>>([]);
