@@ -14,7 +14,7 @@ export default function Home() {
       await axios
         .get("/api/getIssues")
         .then((res) => {
-          // console.log(res.data);
+          console.log(res.data);
           setIssue1(res.data);
         })
         .catch((err) => {
